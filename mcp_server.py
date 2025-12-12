@@ -47,8 +47,16 @@ class SaveConversationInput(BaseModel):
     )
 
 
-# Initialize the MCP server
-mcp = FastMCP("ChatHub")
+# Initialize the MCP server with host configuration for production
+import os
+
+# Get the host from environment or default to localhost
+host = os.environ.get("MCP_HOST", "localhost")
+
+# Set environment variable that MCP uses for transport security
+os.environ["MCP_TRANSPORT_SECURITY_ALLOWED_HOSTS"] = host
+
+mcp = FastMCP("ChatHub", host=host)
 
 
 @mcp.tool()
@@ -135,7 +143,6 @@ app = Starlette(
 )
 
 if __name__ == "__main__":
-    import os
     port = int(os.environ.get("PORT", 8000))
     print(f"Starting ChatHub MCP Server on port {port}...")
     print(f"SSE endpoint available at: http://localhost:{port}/sse")
