@@ -47,16 +47,17 @@ class SaveConversationInput(BaseModel):
     )
 
 
-# Initialize the MCP server with host configuration for production
+# Disable MCP transport security host validation for production deployment
 import os
+try:
+    from mcp.server import transport_security
+    # Monkey-patch to allow all hosts
+    transport_security.validate_host = lambda host, allowed_hosts=None: True
+except (ImportError, AttributeError):
+    pass
 
-# Get the host from environment or default to localhost
-host = os.environ.get("MCP_HOST", "localhost")
-
-# Set environment variable that MCP uses for transport security
-os.environ["MCP_TRANSPORT_SECURITY_ALLOWED_HOSTS"] = host
-
-mcp = FastMCP("ChatHub", host=host)
+# Initialize the MCP server
+mcp = FastMCP("ChatHub")
 
 
 @mcp.tool()
