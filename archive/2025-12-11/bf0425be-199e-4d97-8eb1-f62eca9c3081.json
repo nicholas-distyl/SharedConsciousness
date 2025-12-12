@@ -1,0 +1,30 @@
+{
+  "id": "bf0425be-199e-4d97-8eb1-f62eca9c3081",
+  "title": "Casual greeting and archive request",
+  "summary": "The user greeted the assistant and then asked to save the conversation to their team archive. No technical or strategic discussion occurred; this was a simple conversational exchange followed by an archive request.",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hey how are ya"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey \u2014 I\u2019m here and dialed in.  \nHow\u2019re *you* doing?"
+    },
+    {
+      "role": "user",
+      "content": "Save this conversation to my team archive"
+    }
+  ],
+  "tags": [
+    "greeting",
+    "administrative",
+    "archive"
+  ],
+  "key_points": [
+    "User initiated a casual greeting",
+    "User requested the conversation be saved to the team archive"
+  ],
+  "saved_at": "2025-12-11T00:19:14.981778",
+  "message_count": 3
+}

@@ -1,0 +1,30 @@
+{
+  "id": "a06d87f8-59aa-4af3-9b2f-8e1f8fecf624",
+  "title": "Test Architecture Discussion",
+  "summary": "We discussed how to build an MCP server for archiving ChatGPT conversations.",
+  "messages": [
+    {
+      "role": "user",
+      "content": "How do we save conversations?"
+    },
+    {
+      "role": "assistant",
+      "content": "We can build an MCP server with a save_conversation tool."
+    },
+    {
+      "role": "user",
+      "content": "Great, lets do it!"
+    }
+  ],
+  "tags": [
+    "architecture",
+    "mcp",
+    "hackathon"
+  ],
+  "key_points": [
+    "Use FastMCP framework",
+    "Store as JSON files"
+  ],
+  "saved_at": "2025-12-10T23:19:06.936127",
+  "message_count": 3
+}

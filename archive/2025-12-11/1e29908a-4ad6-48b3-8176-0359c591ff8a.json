@@ -1,0 +1,30 @@
+{
+  "id": "1e29908a-4ad6-48b3-8176-0359c591ff8a",
+  "title": "Greeting and Archive Request",
+  "summary": "The user greeted the assistant casually and then asked for the entire conversation to be saved to the team archive. No technical discussion occurred; the interaction revolved around a brief greeting and an explicit archive request.",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hi how are ya"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey Nick \u2014 doing well, thanks for asking.  How\u2019re you doing?"
+    },
+    {
+      "role": "user",
+      "content": "Save this conversation to my team archive"
+    }
+  ],
+  "tags": [
+    "archive",
+    "greeting",
+    "meta"
+  ],
+  "key_points": [
+    "User initiated a greeting.",
+    "User requested archiving the conversation."
+  ],
+  "saved_at": "2025-12-11T00:18:01.679497",
+  "message_count": 3
+}
