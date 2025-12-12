@@ -135,6 +135,8 @@ app = Starlette(
 )
 
 if __name__ == "__main__":
-    print("Starting ChatHub MCP Server...")
-    print("SSE endpoint available at: http://localhost:8000/sse")
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    import os
+    port = int(os.environ.get("PORT", 8000))
+    print(f"Starting ChatHub MCP Server on port {port}...")
+    print(f"SSE endpoint available at: http://localhost:{port}/sse")
+    uvicorn.run(app, host="0.0.0.0", port=port)
